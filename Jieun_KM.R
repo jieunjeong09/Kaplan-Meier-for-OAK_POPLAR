@@ -24,7 +24,7 @@
 # - KM 추정 자체는 제공된 duration(OS/PFS)을 그대로 사용합니다.
 #
 # 실행:
-#   Rscript km_workflow_R_ko.R ML-ready-oak-poplar.tsv km_outputs
+#   Rscript Jieun_KM.R ML-ready-oak-poplar.tsv km_outputs
 #
 # 옵션(환경변수):
 #   DATA_CUTOFF=2016-01-01   (행정 검열 cutoff; 데모)
