@@ -39,9 +39,5 @@ So the script derives:
 
 Example:
 ```r
-df <- read.table(
-  gzfile("ML-ready-oak-poplar.tsv.gz"),
-  sep = "\t",
-  header = TRUE,
-  check.names = FALSE
-)
+Rscript Jieun_KM.R ML-ready-oak-poplar.tsv Jieun_out
+```
