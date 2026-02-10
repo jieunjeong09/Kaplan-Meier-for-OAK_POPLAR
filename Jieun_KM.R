@@ -36,7 +36,7 @@
 
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) < 2) {
-  cat("사용법: Rscript km_workflow_R_ko.R <input_tsv> <outdir>\n")
+  cat("사용법: Rscript Jieun_KM.R <input_tsv> <outdir>\n")
   quit(status = 1)
 }
 
