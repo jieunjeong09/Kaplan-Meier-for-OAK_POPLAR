@@ -24,7 +24,7 @@
 # - KM 추정 자체는 제공된 duration(OS/PFS)을 그대로 사용합니다.
 #
 # 실행:
-#   Rscript Jieun_KM.R ML-ready-oak-poplar.tsv km_outputs
+#   Rscript km_workflow_R_ko.R ML-ready-oak-poplar.tsv km_outputs
 #
 # 옵션(환경변수):
 #   DATA_CUTOFF=2016-01-01   (행정 검열 cutoff; 데모)
@@ -465,7 +465,21 @@ plot_km <- function(data, time_col, event_col, group_col, title, out_png,
   # Save: include risk table if present
   # ggsurvplot returns a list; use arrange_ggsurvplots to combine safely
   if (isTRUE(show_risktable)) {
-    ggpubr::ggexport(g, filename = out_png, width = 7, height = 5, res = 200)
+    # ggpubr::ggexport(g, filename = out_png, width = 7, height = 5, res = 200)
+    if (isTRUE(show_risktable)) {
+     dpi  <- 200
+     w_in <- 7
+     h_in <- 5
+     ggpubr::ggexport(
+       g,
+       filename = out_png,
+       width  = w_in * dpi,   # 1400 pixels
+       height = h_in * dpi,   # 1000 pixels
+       res = dpi
+     )
+  } else {
+  ggplot2::ggsave(out_png, g$plot, width = 7, height = 5, dpi = 200)
+}
   } else {
     ggplot2::ggsave(out_png, g$plot, width = 7, height = 5, dpi = 200)
   }
