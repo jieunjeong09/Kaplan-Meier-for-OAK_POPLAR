@@ -1,7 +1,7 @@
 # KaplanMeier-for-OAK_POPLAR
 KaplanMeier with input cleaning, QC and survival analysis
 
-This script runs Kaplan–Meier (KM) survival analyses on the OAK/POPLAR-ready TSV provided here in .gz form, producing:
+This script `Jieun_KM.R` runs Kaplan–Meier (KM) survival analyses on the OAK/POPLAR-ready TSV provided here in .gz form, producing:
 
 - KM summary tables (median survival, N, events, survival at requested timepoints)
 - Log-rank test statistics and p-values
